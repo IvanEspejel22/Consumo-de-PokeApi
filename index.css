@@ -1,0 +1,129 @@
+body{
+    background-color: black;
+}
+#contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 60px;
+}
+
+#paginacion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 60px;
+}
+
+h1{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 30px 0;
+    color: white;
+}
+
+.centra{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ball{
+    margin: 25px;;
+    width: 200px;
+    height: 200px;
+    border: 5px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 110px;
+    background-color: white;
+    padding: 0;
+    position: relative;
+}
+
+.mitad-roja{
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 0;
+    width: 200px;
+    height: 100px;
+    border-bottom: 12px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 100px 100px 0 0;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 2;
+}
+
+.centro-ball{
+    width: 80px;
+    height: 80px;
+    border: 15px;
+    border-style: double;
+    border-color: black;
+    border-radius: 50px;
+    background-color: white;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 4;
+    top: 34%;
+    left: 20%;
+    animation-name: crece;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+  
+
+  .centro-ball:hover {
+    animation-play-state: running;
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  @keyframes crece {
+    0%   {left:20%; top:34%;}
+    25%  {width:100px; height:100px; border-radius: 50%; left:10%; top:22%;}
+    50%  {width:150px; height:150px; border-radius: 50%; left:8%; top:16%;}
+    75%  {width:175px; height:175px; border-radius: 50%; left:4%; top:8%;}
+    100% {width:200px; height:200px; border-radius: 50%; left:0; top:0; border: none;}
+  }
+
+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin: 5px 8px;
+    color: white;
+    
+}
+
+h3{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin: 5px 8px;
+    color: black;
+    position: absolute;
+    top: 55%;
+    left: 0px;
+
+
+}
+
+#anterior{
+    border: none;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+}
+
+#siguiente{
+    border: none;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+}
