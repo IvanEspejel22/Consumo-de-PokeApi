@@ -4,6 +4,8 @@ let p;
 let siguiente;
 let anterior;
 let centro;
+let boton;
+let botonC;
 
 
 function traepoke(linkea){
@@ -45,7 +47,9 @@ function traepoke(linkea){
               contiene.innerHTML += `
               <div class="ball centra">
                 <div class="mitad-roja centra"> <h2>${pokeRe.name}</h2></div>
-                  <button class="centro-ball" style="background-image:url(${pokeRe.sprites.front_shiny})">
+                  <button id='${pokeRe.name}' 
+                  onClick="eligeCambio('${pokeRe.name}','${pokeRe.sprites.front_shiny}','${pokeRe.sprites.back_shiny}')" class="centro-ball" 
+                  style="background-image:url(${pokeRe.sprites.front_shiny})">
                 </button>
                 <h3>#${pokeRe.id}</h3>
               </div>`
@@ -56,7 +60,21 @@ function traepoke(linkea){
       } 
   );
   }
-  
+
+  function eligeCambio(ident, frente , espalda){
+    boton= document.getElementById(ident);
+    botonC = boton.style.backgroundImage.toString();
+    if(botonC.slice(5,-2) == frente){
+      final=espalda;
+    }else{
+      final=frente;
+    }
+  cambia(ident, final)
+  }
+
+  function cambia(identifica, liga){
+    boton= document.getElementById(identifica).style.backgroundImage = "url("+liga+")";
+  }
   traepoke('https://pokeapi.co/api/v2/pokemon');
   
   
