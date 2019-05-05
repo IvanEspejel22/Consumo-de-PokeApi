@@ -75,16 +75,15 @@ h1{
     left: 20%;
     animation-name: crece;
     animation-duration: .8s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-play-state: paused;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
   }
   
-
-  .centro-ball:hover {
+ .centro-ball:hover {
     animation-play-state: running;
-  }
+  } 
   
   /* Safari 4.0 - 8.0 */
   @keyframes crece {
@@ -100,7 +99,7 @@ h2{
     font-size: 14px;
     margin: 5px 8px;
     color: white;
-    
+    text-transform: capitalize;
 }
 
 h3{
@@ -111,7 +110,7 @@ h3{
     position: absolute;
     top: 55%;
     left: 0px;
-
+    text-transform: capitalize;
 
 }
 
